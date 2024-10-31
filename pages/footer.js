@@ -9,7 +9,7 @@ const Footer = () => {
   useEffect(() => {
     const fetchStarCount = async () => {
       try {
-        const response = await fetch('https://api.github.com/repos/0xmetaschool/lang-learn-gpt');
+        const response = await fetch('https://api.github.com/repos/0xmetaschool/dating-coach-gpt');
         const data = await response.json();
         setStarCount(data.stargazers_count); // Get the star count
       } catch (error) {
@@ -22,10 +22,10 @@ const Footer = () => {
 
   return (
     <Box as="footer" w="full">
-      <Box maxW="7xl" mx="auto" px="1.25rem" py="1.25rem">
+      <Box maxW="7xl" mx="auto" px="1.25rem" mt="1.25rem" mb="1.25rem">
         <Flex justifyContent="space-between" alignItems="flex-start">
           {/* Left side */}
-          <Box>
+          <Box textAlign="center">
             <Text
               color="gray.500"
               fontSize="xs"
@@ -41,7 +41,7 @@ const Footer = () => {
             </Text>
             <Flex alignItems="center" gap="4">
               <Link
-                href="https://github.com/0xmetaschool/lang-learn-gpt/fork"
+                href="https://github.com/0xmetaschool/dating-coach-gpt/fork"
                 isExternal
                 bg="black"
                 color="white"
@@ -109,8 +109,8 @@ const Footer = () => {
           <Flex flexDirection="column" alignItems="flex-end" gap="4">
             {/* Made with love section */}
             <Flex alignItems="center" gap="2" pt="8">
-              <Text color="gray.600" fontFamily="sans-serif">MADE WITH</Text>
-              <Text color="black" fontSize="xl" fontFamily="sans-serif">♥</Text>
+              <Text color="gray.600" fontFamily="sans-serif" >MADE WITH</Text>
+              <Text color="black" fontSize="1.25rem" fontFamily="sans-serif">♥</Text>
               <Text color="gray.600" fontFamily="sans-serif">BY</Text>
               <Flex alignItems="center">
                 <Image
