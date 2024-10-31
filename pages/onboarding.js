@@ -16,6 +16,7 @@ import {
 } from '@chakra-ui/react';
 import { Heart } from 'lucide-react';
 
+// @dev OnboardingPage component that guides users through a series of questions to set up their profile.
 export default function OnboardingPage() {
   const [step, setStep] = useState(0);
   const [age, setAge] = useState('');
@@ -24,6 +25,7 @@ export default function OnboardingPage() {
   const toast = useToast();
   const router = useRouter();
 
+  // @dev Redirect to the authentication page if the user is not authenticated.
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (!token) {
@@ -31,6 +33,7 @@ export default function OnboardingPage() {
     }
   }, [router]);
 
+  // @dev Handle the next step or submission of the onboarding form.
   const handleNext = () => {
     if (step < 2) {
       setStep(step + 1);
@@ -39,6 +42,7 @@ export default function OnboardingPage() {
     }
   };
 
+  // @dev Handle the submission of the onboarding form.
   const handleSubmit = async () => {
     try {
       const token = localStorage.getItem('token');
@@ -86,11 +90,13 @@ export default function OnboardingPage() {
     }
   };
 
+  // @dev Define color mode values for background, box background, text, and border.
   const bgColor = useColorModeValue('purple.50', 'gray.900');
   const boxBg = useColorModeValue('white', 'gray.800');
   const textColor = useColorModeValue('gray.600', 'gray.200');
   const borderColor = useColorModeValue('brand.200', 'brand.600');
 
+  // @dev Array of questions to be displayed in the onboarding process.
   const questions = [
     { title: "How old are you?", component: (
       <Input

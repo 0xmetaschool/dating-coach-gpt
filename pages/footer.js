@@ -3,9 +3,11 @@
 import { Box, Button, Flex, Link, Text, Image, useColorModeValue } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 
+// @dev Footer component that displays information about the project and social links.
 const Footer = () => {
   const [starCount, setStarCount] = useState(0);
 
+  // @dev Fetch the star count from the GitHub repository when the component mounts.
   useEffect(() => {
     const fetchStarCount = async () => {
       try {

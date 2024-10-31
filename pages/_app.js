@@ -4,11 +4,12 @@ import { Sun, Moon, Heart, LogOut } from 'lucide-react';
 import { useRouter } from 'next/router';
 import theme from '../styles/theme';
 import Image from 'next/image';
-import loadingGif from '../public/cupidLoading.gif'
+import loadingGif from '../public/cupidLoading.gif';
 import { AuthProvider, useAuth } from '../contexts/authContext';
 import { Global } from '@emotion/react';
 import Footer from './footer';
 
+// @dev Define custom fonts using Global styles.
 const Fonts = () => (
   <Global
     styles={`
@@ -23,21 +24,24 @@ const Fonts = () => (
   />
 );
 
+// @dev Main content component that handles rendering based on authentication and loading states.
 function AppContent({ Component, pageProps }) {
   const { colorMode, toggleColorMode } = useColorMode();
   const router = useRouter();
   const { user, logout, loading } = useAuth();
 
+  // @dev Define color mode values for background, text, header background, and header shadow.
   const bgColor = useColorModeValue('gray.50', 'gray.900');
   const textColor = useColorModeValue('gray.800', 'white');
   const headerBgColor = useColorModeValue('white', 'gray.800');
   const headerShadow = useColorModeValue('sm', 'md');
 
+  // @dev Display a loading spinner if the app is in a loading state.
   if (loading) {
     return (
       <Flex height="100vh" alignItems="center" justifyContent="center" bg={bgColor}>
         <Image
-          src="/cupidLoading.gif"
+          src={loadingGif}
           alt="Loading"
           width={300}
           height={300}
@@ -46,10 +50,12 @@ function AppContent({ Component, pageProps }) {
     );
   }
 
+  // @dev Determine if the current route is the dating assistant page.
   const isDatingAssistant = router.pathname === '/dating-assistant';
 
   return (
     <Flex flexDirection="column" minHeight="100vh" bg={bgColor} color={textColor}>
+      {/* @dev Header component with navigation and color mode toggle. */}
       <Flex 
         as="header" 
         bg={headerBgColor} 
@@ -100,6 +106,7 @@ function AppContent({ Component, pageProps }) {
           </Flex>
         </Container>
       </Flex>
+      {/* @dev Main content area with conditional rendering based on the current route. */}
       <Flex flexGrow={1} flexDirection="column">
         {isDatingAssistant ? (
           <Component {...pageProps} />
@@ -113,6 +120,7 @@ function AppContent({ Component, pageProps }) {
   );
 }
 
+// @dev Main application component that wraps the entire app with ChakraProvider and AuthProvider.
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>

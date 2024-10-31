@@ -26,6 +26,7 @@ import { FaRobot, FaComments, FaMagic, FaFacebook, FaTwitter, FaInstagram, FaLin
 import { GiCrystalBall, GiCupidTarget, GiLovers } from 'react-icons/gi';
 import TestimonialCarousel from '../components/TestimonialCarousel';
 
+// @dev Component to display the logo of a dating app.
 const AppLogo = ({ name }) => (
   <Box
     width={{ base: "80px", md: "120px" }}
@@ -46,6 +47,7 @@ const AppLogo = ({ name }) => (
   </Box>
 );
 
+// @dev Component to display a feature with an icon, title, and description.
 const Feature = ({ icon, title, text }) => (
   <VStack 
     align="center" 
@@ -63,6 +65,7 @@ const Feature = ({ icon, title, text }) => (
   </VStack>
 );
 
+// @dev Component to display a pricing card with a title, price, features, and an optional "Most Popular" tag.
 const PricingCard = ({ title, price, features, isPopular, onClick }) => {
   const bgColor = useColorModeValue('white', 'gray.700');
   const borderColor = useColorModeValue('gray.200', 'gray.600');
@@ -116,6 +119,7 @@ const PricingCard = ({ title, price, features, isPopular, onClick }) => {
   );
 };
 
+// @dev Main landing page component that displays various sections like hero, features, testimonials, pricing, and FAQ.
 const LandingPage = ({ onShowAuth }) => {
   const headingColor = useColorModeValue('gray.800', 'white');
   const textColor = useColorModeValue('gray.600', 'gray.300');

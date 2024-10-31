@@ -16,6 +16,7 @@ import {
 import { Send, User, MessageSquare, FileText, Shirt, Mail, CreditCard } from 'lucide-react';
 import { useAuth } from '../contexts/authContext';
 
+// @dev Component to display individual chat messages.
 const ChatMessage = ({ message }) => {
   const bgColor = useColorModeValue('white', 'gray.700');
   const borderColor = useColorModeValue('gray.200', 'gray.600');
@@ -51,6 +52,7 @@ const ChatMessage = ({ message }) => {
   );
 };
 
+// @dev Component to display informational cards with icons and text.
 const InfoCard = ({ icon, text, onClick }) => {
   const bgColor = useColorModeValue('gray.100', 'gray.700');
   const textColor = useColorModeValue('gray.800', 'gray.100');
@@ -76,6 +78,7 @@ const InfoCard = ({ icon, text, onClick }) => {
   );
 };
 
+// @dev Component to display a typing indicator.
 const TypingIndicator = () => (
   <Flex align="center" mt={2}>
     <Text fontSize="xl" color="gray.500">•</Text>
@@ -93,6 +96,7 @@ const TypingIndicator = () => (
   </Flex>
 );
 
+// @dev Function to get a greeting based on the current time of day.
 const getGreeting = () => {
   const hour = new Date().getHours();
   if (hour < 12) return "Good morning";
@@ -100,6 +104,7 @@ const getGreeting = () => {
   return "Good evening";
 };
 
+// @dev Main component for the Dating Assistant page.
 export default function DatingAssistantPage() {
   const [input, setInput] = useState('');
   const [conversation, setConversation] = useState([]);
@@ -113,19 +118,22 @@ export default function DatingAssistantPage() {
   const bg = useColorModeValue('gray.50', 'gray.900');
   const borderColor = useColorModeValue('gray.200', 'gray.700');
 
+  // @dev Scroll to the bottom of the conversation when new messages are added.
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [conversation]);
 
-
+  // @dev Check if the user is authenticated when the component mounts.
   useEffect(() => {
     checkUser();
   }, [router]);
 
+  // @dev Update the remaining credits when the user object changes.
   useEffect(() => {
     setRemainingCredits(user?.credits || 0);
   }, [user]);
 
+  // @dev Function to check if the user is authenticated and fetch user details.
   const checkUser = async () => {
     const token = localStorage.getItem('token');
     if (!token) {
@@ -143,6 +151,7 @@ export default function DatingAssistantPage() {
     }
   };
 
+  // @dev Function to handle form submission and initiate the chat interaction.
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!input.trim()) return;
