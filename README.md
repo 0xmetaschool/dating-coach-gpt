@@ -3,12 +3,12 @@ DatingCoachGPT is a dating coach that uses AI to help you with any questions you
 
 ## Table of Contents
   - [Live Demo](#live-demo)
-  - [Screenshots](#screenshots)
   - [Features](#features)
   - [Technologies Used](#technologies-used)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
+  - [Screenshots](#screenshots)
   - [How to use the application](#how-to-use-the-application)
   - [API Reference](#api-reference)
   - [Use Cases & Future Enhancements](#use-cases-and-future-enhancements)
@@ -114,18 +114,15 @@ DatingCoachGPT is a dating coach that uses AI to help you with any questions you
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
-| `/api/auth/signup` | POST | Creates a new user account |
-| `/api/auth/login` | POST | Logs in an existing user |
-| `/api/profile` | POST | Updates user profile |
-| `/api/matches` | GET | Retrieves potential matches |
-| `/api/likes` | POST | Sends a like to another user |
-| `/api/chat` | POST | Sends a message to a match |
-| `/api/photos` | POST | Uploads profile photos |
-| `/api/preferences` | PUT | Updates matching preferences |
-| `/api/suggestions` | GET | Gets AI-powered conversation starters |
-| `/api/block` | POST | Blocks a user |
+| `/api/signup` | POST | Creates a new user account |
+| `/api/login` | POST | Logs in an existing user |
+| `/api/user` | POST | Updates user profile |
+| `/api/conversation-history` | GET | Retrieves the conversation history |
+| `/api/handler` | POST | echoes back the request's body, query parameters, and cookies in the response |
+| `/api/onboarding` | POST | completes the onboarding process for a user |
+| `/api/dating-guide/stream` | GET | streams advice from a chatbot via Server-Sent Events (SSE) |
 
-Note: All endpoints except `/api/auth/signup` and `/api/auth/login` require authentication via a Bearer token in the Authorization header.
+Note: All endpoints except `/api/signup` and `/api/login` require authentication via a Bearer token in the Authorization header.
 
 ## Use Cases & Future Enhancements
 
@@ -151,7 +148,7 @@ Want to contribute? Check out our contributing guidelines below!
 
 We love contributions! Here's how you can help make the project even better:
 
-- Fork the project (gh repo fork https://github.com/yourusername/date-match)
+- Fork the project (gh repo fork https://github.com/0xmetaschool/dating-coach-gpt.git)
 - Create your feature branch (git checkout -b feature/AmazingFeature)
 - Commit your changes (git commit -m 'Add some AmazingFeature')
 - Push to the branch (git push origin feature/AmazingFeature)
