@@ -1,4 +1,4 @@
-# DatingCoachGPT: AI-Powered Dating Application
+# DatingCoachGPT
 DatingCoachGPT is a dating coach that uses AI to help you with any questions you have about dating. Be it how to ask someone out, how to make a good first impression, or how to keep the conversation going, DatingCoachGPT is here to help.
 
 ## Table of Contents
