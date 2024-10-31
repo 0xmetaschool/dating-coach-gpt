@@ -1,9 +1,7 @@
-# DateMatch: AI-Powered Dating Application
-DateMatch is a modern dating app that uses AI to help you find meaningful connections. It creates personalized matches based on your preferences, interests, and compatibility factors. The app uses advanced AI to analyze profiles, suggest conversation starters, and help you put your best foot forward in the dating world.
+# DatingCoachGPT: AI-Powered Dating Application
+DatingCoachGPT is a dating coach that uses AI to help you with any questions you have about dating. Be it how to ask someone out, how to make a good first impression, or how to keep the conversation going, DatingCoachGPT is here to help.
 
 ## Table of Contents
-- [DateMatch: AI-Powered Dating Application](#DateMatch-ai-powered-dating-application)
-  - [Table of Contents](#table-of-contents)
   - [Live Demo](#live-demo)
   - [Screenshots](#screenshots)
   - [Features](#features)
@@ -21,16 +19,15 @@ DateMatch is a modern dating app that uses AI to help you find meaningful connec
 
 ## Live Demo
 
-[https://datematch.vercel.app](https://datematch.vercel.app)
+[https://DatingCoachGPT.vercel.app](https://DatingCoachGPT.vercel.app)
 
 ## Features
 
 - User Authentication and Profile Management
-- AI-Powered Smart Matching Algorithm
-- Interactive Chat with Ice-Breaker Suggestions
-- Photo Analysis and Profile Enhancement Tips
-- Real-time Notifications and Match Alerts
-- Advanced Privacy and Safety Features
+- AI-Powered Dating Advice and Coaching
+- Personalized Conversation Strategies
+- Dating Profile Review and Optimization
+- Real-time Feedback on Dating Scenarios
 
 ## Technologies Used
 
@@ -38,9 +35,7 @@ DateMatch is a modern dating app that uses AI to help you find meaningful connec
 - Chakra UI for Responsive Design
 - OpenAI GPT-4 Model for AI-Powered Features
 - MongoDB for Database Management
-- OpenAI API for Profile Analysis
-- Jose for Authentication
-- AWS S3 for Image Storage
+- Json Web Token for Authentication
 
 ## Getting Started
 
@@ -49,14 +44,13 @@ DateMatch is a modern dating app that uses AI to help you find meaningful connec
 - Node.js (version 14 or later)
 - MongoDB 
 - OpenAI API key
-- AWS Account for S3
 
 ### Installation
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/date-match
-   cd date-match
+   git clone https://github.com/0xmetaschool/dating-coach-gpt
+   cd dating-coach-gpt
    ```
 
 2. Install dependencies:
@@ -69,16 +63,12 @@ DateMatch is a modern dating app that uses AI to help you find meaningful connec
    - next: React framework for production
    - react and react-dom: Core React libraries
    - @chakra-ui/react, @emotion/react, @emotion/styled, framer-motion: UI component library and its dependencies
-   - @fontsource/source-sans-pro: Source Sans Pro font
    - axios: Promise-based HTTP client for making API requests
    - openai: OpenAI API client for Node.js
    - mongodb: MongoDB driver for Node.js
-   - jose: Modern JavaScript implementation of JSON Web Tokens
+   - jsonwebtoken: JavaScript implementation of JSON Web Tokens
    - bcryptjs: Library for hashing passwords
    - react-icons: Icon library for React
-   - aws-sdk: AWS SDK for S3 integration
-   - socket.io: Real-time chat functionality
-   - sharp: Image processing library
 
 3. Set up environment variables:
    - Create a `.env.local` file in the root directory
@@ -87,10 +77,6 @@ DateMatch is a modern dating app that uses AI to help you find meaningful connec
      MONGODB_URI=your_mongodb_connection_string
      JWT_SECRET=your_jwt_secret  
      OPENAI_API_KEY=your_openai_api_key
-     AWS_ACCESS_KEY_ID=your_aws_access_key
-     AWS_SECRET_ACCESS_KEY=your_aws_secret_key
-     AWS_REGION=your_aws_region
-     S3_BUCKET_NAME=your_bucket_name
      ```
 
 4. Start the development server:
@@ -104,30 +90,25 @@ DateMatch is a modern dating app that uses AI to help you find meaningful connec
 
 <div style="display: flex; justify-content: space-between;">
   <img src="screenshots/home.png" alt="Home Page" style="width: 49%; border: 2px solid black;" />
-  <img src="screenshots/matches.png" alt="Matches Page" style="width: 49%; border: 2px solid black;" />
+  <img src="screenshots/chat.png" alt="Matches Page" style="width: 49%; border: 2px solid black;" />
 </div>
 
 <div style="margin-top: 10px;">
-  <img src="screenshots/profile.png" alt="Profile Page" style="width: 100%; border: 2px solid black;" />
-</div>
-
-<div style="margin-top: 10px;">
-  <img src="screenshots/chat.png" alt="Chat Page" style="width: 100%; border: 2px solid black;" />
+  <img src="screenshots/messages.png" alt="Profile Page" style="width: 49%; border: 2px solid black;" />
 </div>
 
 ## How to use the application
 
-1. Creating your dating profile:
-   - Sign up or log in to your account
-   - Upload your best photos
-   - Fill out your interests and preferences
-   - Receive AI-powered suggestions to enhance your profile
+1. Getting Started with DatingCoachGPT:
+   - Create a new account or sign in to your existing one
+   - Complete your profile with accurate personal information
+   - Add detailed descriptions of your interests, hobbies, and preferences
 
-2. Finding matches:
-   - Browse through AI-curated potential matches
-   - Use the smart filtering system
-   - Send likes or super-likes
-   - Start conversations with matches using AI-suggested ice-breakers
+2. Maximizing Your Dating Success:
+   - Use the app to get personalized advice on how to improve your dating game
+   - Practice conversation scenarios with the app before real interactions
+   - Get feedback on your dating profile and how to optimize it for better matches
+   - Use the app to prepare for dates and improve your chances of success
 
 ## API Reference
 
@@ -184,12 +165,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - OpenAI for the GPT-4 API
 - Chakra UI team for their React component library
-- AWS for cloud storage solutions
 
 ## FAQ
 
-**Q: Is DateMatch free to use?**
-A: DateMatch offers both free and premium tiers. Basic matching and messaging are free, while advanced features require a subscription.
+**Q: Is DatingCoachGPT free to use?**
+A: DatingCoachGPT offers both free and premium tiers. Basic matching and messaging are free, while advanced features require a subscription.
 
 **Q: How does the AI matching work?**
 A: Our AI analyzes profiles, interests, behavior patterns, and stated preferences to suggest compatible matches.
