@@ -118,8 +118,8 @@ DatingCoachGPT is a dating coach that uses AI to help you with any questions you
 | `/api/login` | POST | Logs in an existing user |
 | `/api/user` | POST | Updates user profile |
 | `/api/conversation-history` | GET | Retrieves the conversation history |
-| `/api/onboarding` | POST | completes the onboarding process for a user |
-| `/api/dating-guide/stream` | GET | streams advice from a chatbot via Server-Sent Events (SSE) |
+| `/api/onboarding` | POST | Completes the onboarding process for a user |
+| `/api/dating-guide/stream` | GET | Streams advice from a chatbot via Server-Sent Events (SSE) |
 
 Note: All endpoints except `/api/signup` and `/api/login` require authentication via a Bearer token in the Authorization header.
 
