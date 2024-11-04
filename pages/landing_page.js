@@ -25,7 +25,7 @@ import {
 import { FaRobot, FaComments, FaMagic, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { GiCrystalBall, GiCupidTarget, GiLovers } from 'react-icons/gi';
 import TestimonialCarousel from '../components/TestimonialCarousel';
-import Footer from '../components/Footer';
+import Footer from './footer';
 
 // @dev Component to display the logo of a dating app.
 const AppLogo = ({ name }) => (
