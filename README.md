@@ -118,7 +118,6 @@ DatingCoachGPT is a dating coach that uses AI to help you with any questions you
 | `/api/login` | POST | Logs in an existing user |
 | `/api/user` | POST | Updates user profile |
 | `/api/conversation-history` | GET | Retrieves the conversation history |
-| `/api/handler` | POST | echoes back the request's body, query parameters, and cookies in the response |
 | `/api/onboarding` | POST | completes the onboarding process for a user |
 | `/api/dating-guide/stream` | GET | streams advice from a chatbot via Server-Sent Events (SSE) |
 
@@ -127,20 +126,18 @@ Note: All endpoints except `/api/signup` and `/api/login` require authentication
 ## Use Cases & Future Enhancements
 
 **Current Use Cases:**
-- Find potential matches based on compatibility
-- Engage in meaningful conversations with AI assistance
-- Share and view verified profile photos
-- Set dating preferences and filters
-- Report inappropriate behavior
+- Get personalized dating advice and coaching
+- Practice conversation skills with AI guidance
+- Receive feedback on dating profiles
+- Learn effective communication strategies
+- Get help with specific dating scenarios and situations
 
 **Coming Soon:**
-- Video chat integration
-- AI-powered date planning suggestions
-- Virtual dating events
-- Advanced matching algorithms
-- Profile verification badges
-- Location-based matching
-- Integration with social media platforms
+- Real-time date coaching using real-time voice recognition
+- AI-powered body language analysis via video dating
+- Mock date simulations
+- Dating profile writing assistance
+- Cultural dating customs guidance
 
 Want to contribute? Check out our contributing guidelines below!
 
