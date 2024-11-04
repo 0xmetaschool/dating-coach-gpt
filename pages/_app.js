@@ -7,7 +7,6 @@ import Image from 'next/image';
 import loadingGif from '../public/cupidLoading.gif';
 import { AuthProvider, useAuth } from '../contexts/authContext';
 import { Global } from '@emotion/react';
-import Footer from './footer';
 
 // @dev Define custom fonts using Global styles.
 const Fonts = () => (
@@ -127,7 +126,6 @@ function MyApp({ Component, pageProps }) {
       <Fonts />
       <AuthProvider>
         <AppContent Component={Component} pageProps={pageProps} />
-        <Footer />
       </AuthProvider>
     </ChakraProvider>
   );
