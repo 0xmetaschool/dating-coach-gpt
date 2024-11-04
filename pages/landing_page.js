@@ -350,8 +350,8 @@ const LandingPage = ({ onShowAuth }) => {
             </Button>
           </Container>
         </Box>
-        <Footer />
       </Box>
+      <Footer />
     </>
   );
 };
