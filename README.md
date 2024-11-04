@@ -123,6 +123,24 @@ DatingCoachGPT is a dating coach that uses AI to help you with any questions you
 
 Note: All endpoints except `/api/signup` and `/api/login` require authentication via a Bearer token in the Authorization header.
 
+## Use Cases & Future Enhancements
+
+**Current Use Cases:**
+- Get personalized dating advice and coaching
+- Practice conversation skills with AI guidance
+- Receive feedback on dating profiles
+- Learn effective communication strategies
+- Get help with specific dating scenarios and situations
+
+**Coming Soon:**
+- Real-time date coaching using real-time voice recognition
+- AI-powered body language analysis via video dating
+- Mock date simulations
+- Dating profile writing assistance
+- Cultural dating customs guidance
+
+Want to contribute? Check out our contributing guidelines below!
+
 ## Contributing
 
 We love contributions! Here's how you can help make the project even better:
