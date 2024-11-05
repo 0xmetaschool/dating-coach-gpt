@@ -19,7 +19,7 @@ An AI coach to help you with any questions you have about dating.
 
 ## Live Demo
 
-[https://DatingCoachGPT.vercel.app](https://DatingCoachGPT.vercel.app)
+[https://dating-coach-gpt.vercel.app/](https://dating-coach-gpt.vercel.app/)
 
 ## Features
 
