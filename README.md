@@ -1,5 +1,5 @@
 # DatingCoachGPT
-DatingCoachGPT is a dating coach that uses AI to help you with any questions you have about dating. Be it how to ask someone out, how to make a good first impression, or how to keep the conversation going, DatingCoachGPT is here to help.
+An AI coach to help you with any questions you have about dating.
 
 ## Table of Contents
   - [Live Demo](#live-demo)
@@ -140,7 +140,7 @@ We love contributions! Here's how you can help make the project even better:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/0xmetaschool/dating-coach-gpt/blob/main/LICENSE) file for details.
 
 ## Acknowledgments
 
